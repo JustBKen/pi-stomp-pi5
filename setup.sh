@@ -116,5 +116,10 @@ setup/services/create_services.sh
 printf "\n===== RT Kernel Install =====\n"
 setup/sys/rtkernel.sh
 
+printf "\n===== Switching to lgpio =====\n"
+sudo apt remove python3-rpi.gpio 
+sudo apt install python3-rpi-lgpio
+
+
 printf "\n===== pi-stomp setup complete - rebooting =====\n"
 sudo reboot now
