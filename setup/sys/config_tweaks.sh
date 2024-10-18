@@ -27,6 +27,7 @@ sudo bash -c "sed -i \"s/^\s*dtoverlay=vc4-kms-v3d/#dtoverlay=vc4-kms-v3d/\" /bo
 
 # Enable SPI
 sudo bash -c "sed -i \"s/^\s*#dtparam=spi=on/dtparam=spi=on/\" /boot/firmware/config.txt"
+sudo bash -c "sed -i \"s/^\s*#dtoverlay=spi0-2cs,cs0_pin=0,cs1_pin=7/dtoverlay=spi0-2cs,cs0_pin=0,cs1_pin=7/\" /boot/firmware/config.txt"
 sudo bash -c "sed -i \"s/^\s*#dtparam=i2s=on/dtparam=i2s=on/\" /boot/firmware/config.txt"
 sudo bash -c "sed -i \"s/^\s*#dtparam=i2c_arm=on/dtparam=i2c_arm=on/\" /boot/firmware/config.txt"
 
